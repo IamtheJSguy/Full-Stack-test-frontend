@@ -8,3 +8,9 @@ To Run the project First :
 Clone this repository 
 1. Run " npm install "
 2. Run " npm run dev "
+
+
+<h3> AWS base url </h3>
+http://ec2-18-216-107-145.us-east-2.compute.amazonaws.com:5000/api/
+                             OR
+http://18.216.107.145:5000/api/
