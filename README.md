@@ -14,3 +14,6 @@ Clone this repository
 http://ec2-18-216-107-145.us-east-2.compute.amazonaws.com:5000/api/
                              OR
 http://18.216.107.145:5000/api/
+
+<h3> Live Demo(AWS) </h3>
+http://ec2-3-21-237-106.us-east-2.compute.amazonaws.com:9527
