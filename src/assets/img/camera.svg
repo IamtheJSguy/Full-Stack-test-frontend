@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22.968" height="20.671" viewBox="0 0 22.968 20.671">
+    <defs>
+        <style>
+            .cls-2{fill:#fff}
+        </style>
+    </defs>
+    <g id="ic_camera_alt_24px" opacity="0.5">
+        <circle id="Ellipse_14" cx="2.765" cy="2.765" r="2.765" class="cls-2" data-name="Ellipse 14" transform="translate(8.719 8.876)"/>
+        <path id="Path_89" d="M10.039 2l-2.1 2.3H4.3A2.3 2.3 0 0 0 2 6.594v13.781a2.3 2.3 0 0 0 2.3 2.3h18.371a2.3 2.3 0 0 0 2.3-2.3V6.594a2.3 2.3 0 0 0-2.3-2.3h-3.64L16.929 2zm3.445 17.226a5.742 5.742 0 1 1 5.742-5.742 5.744 5.744 0 0 1-5.742 5.742z" class="cls-2" data-name="Path 89" transform="translate(-2 -2)"/>
+    </g>
+</svg>
