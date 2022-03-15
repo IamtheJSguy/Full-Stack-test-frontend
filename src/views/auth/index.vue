@@ -113,7 +113,10 @@ export default {
     })
   },
   created() {
-  },
+      if(this.user.id){
+        this.$router.push('/app')
+      }
+    },
   mounted() {
     if (this.loginForm.email === '') {
       this.$refs.credential.focus()
@@ -145,8 +148,8 @@ export default {
                 { status: 'Done!', message: 'Successfully Logged In' },
                 'success'
               )
-              localStorage.setItem('userId', response.data.data.id)
-              // this.$store.commit('currentUser', response.data.data)
+              // localStorage.setItem('userId', response.data.data.id)
+              this.$store.commit('currentUser', response.data.data)
               this.loading = false
               this.$router.push('/app')
             })

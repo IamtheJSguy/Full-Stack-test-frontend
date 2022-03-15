@@ -54,6 +54,8 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   name: "PlacesIndex",
   data() {
@@ -69,7 +71,16 @@ export default {
     };
   },
   beforeCreate() {},
-  created() {},
+    computed: {
+    ...mapState({
+      user: state => state.user
+    })
+  },
+  created() {
+    if(!this.user.id){
+        this.$router.push('/')
+      }
+  },
   mounted() {
     this.geolocate();
     setTimeout(() => {

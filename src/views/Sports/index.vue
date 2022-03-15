@@ -90,6 +90,8 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   name: 'SportIndex',
   data() {
@@ -100,9 +102,18 @@ export default {
       filteredData: []
     }
   },
+    computed: {
+    ...mapState({
+      user: state => state.user
+    })
+  },
   created() {
+    if(!this.user.id){
+        this.$router.push('/')
+      }
     this.fetchSports()
     this.getMySports()
+
   },
   methods: {
     fetchSports() {

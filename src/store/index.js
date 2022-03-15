@@ -38,6 +38,7 @@ export default new Vuex.Store({
             }
         },
         currentUser(state, currentUser) {
+            console.log(currentUser)
             state.user = currentUser
             if (!currentUser) {
                 state.user = currentUser
@@ -45,12 +46,10 @@ export default new Vuex.Store({
                 localStorage.removeItem('currentUser')
                 localStorage.removeItem('token')
             } else {
-                if (currentUser.loginName) {
-                    state.user = currentUser
-                    localStorage.setItem('currentUser', JSON.stringify(currentUser))
-                    localStorage.setItem('token', currentUser.token)
-                    localStorage.setItem('userId', currentUser.id)
-                }
+                state.user = currentUser
+                localStorage.setItem('currentUser', JSON.stringify(currentUser))
+                localStorage.setItem('userId', currentUser.id)
+
             }
         },
         Data(state, data) {
@@ -111,8 +110,7 @@ export default new Vuex.Store({
         },
         fetchPlaces({ commit }, payload) {
             commit('Data', {})
-            return axios.get(`https://sportplaces.api.decathlon.com/api/v1/places?origin=${payload.lng},${payload.lat}&radius=99&sports=${payload.sportId}`)
-                // return axios.get(`https://sportplaces.api.decathlon.com/api/v1/places?origin=-73.582000, 45.511000&radius=99&sports=175`)
+            return axios.get(`https://sportplaces.api.decathlon.com/api/v1/places?origin=${payload.lng},${payload.lat}&radius=50&sports=${payload.sportId}`)
         },
         addToFavourite({ commit }, data) {
             commit('Data', {})

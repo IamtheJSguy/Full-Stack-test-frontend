@@ -125,6 +125,9 @@ export default {
     })
   },
   created() {
+    if(this.user.id){
+        this.$router.push('/app')
+      }
   },
   mounted() {
   },
@@ -155,6 +158,7 @@ export default {
                 'success'
               )
               this.$store.commit('currentUser', response.data.data)
+              
               this.loading = false
               this.$router.push('/app')
             })
