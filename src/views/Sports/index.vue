@@ -18,7 +18,7 @@
             <p>{{ sport.name }}</p>
             <button
               class="route-btn"
-              @click="$router.push('/app/sports/' + sport.sportId)"
+              @click="$router.push('/app/sports/' + sport.decathlonId)"
             >
               Find Places
             </button>
