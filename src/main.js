@@ -22,8 +22,8 @@ import * as filters from './filters' // global filters
 
 import axios from 'axios'
 
-axios.defaults.baseURL = 'http://18.216.107.145:5000/api'
-    // axios.defaults.baseURL = 'http://localhost:5000/api'
+// axios.defaults.baseURL = 'http://18.216.107.145:5000/api'
+axios.defaults.baseURL = 'http://localhost:5000/api'
 
 if (process.env.NODE_ENV === 'production') {
     const { mockXHR } = require('../mock')
